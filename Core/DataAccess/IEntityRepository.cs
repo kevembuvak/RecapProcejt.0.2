@@ -7,7 +7,6 @@ namespace DataAccess.Abstract
 {
     public interface IEntityRepository<Type>
     {
-        Type GetById(int id);
         List<Type> GetAll(Expression<Func<Type, bool>> filter = null);
         Type Get(Expression<Func<Type, bool>> filter);
         void Add(Type entity);
