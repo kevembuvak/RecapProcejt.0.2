@@ -11,6 +11,6 @@ namespace Business.Constants
         public static string carAllListed = "Arabaların Hepsi Listelendi.";
         public static string carAllListedByFilter = "Arabalar Filtrelendi.";
         public static string rentalAdded = "Kiralama Eklendi.";
-        public static string rentalAddedNoReturnDate = "Araba Henüz Geri Verilmemiş, Kiralayamazsınız."
+        public static string rentalAddedNoReturnDate = "Araba Henüz Geri Verilmemiş, Kiralayamazsınız.";
     }
 }
