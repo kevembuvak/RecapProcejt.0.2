@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -21,10 +22,11 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+        // Validation kodu ile business kodu ayrıdır
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-
-            ValidationTool.Validate(new CarValidator(), car);
+            // İş Kodları - Business Codes -----> Koşullar Döngüler vs.
 
             _carDal.Add(car);
 
