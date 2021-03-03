@@ -17,7 +17,7 @@ namespace DataAccess.Concrete.EntityFrameworkDal
         {
             using (CarDbContext context = new CarDbContext())
             {
-                var result = from car in context.Set<Car>()
+                var result = from car in context.Cars
                              join brand in context.Set<Brand>()
                              on car.BrandId equals brand.BrandId
                              join color in context.Set<Color>()
